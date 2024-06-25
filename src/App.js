@@ -16,19 +16,21 @@ import './App.css';
 function App() {
   return (
     <Router>
-      <AppNavbar />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/movies/popular" element={<PopularMovies />} />
-        <Route path="/movies/coming-soon" element={<ComingSoonMovies />} />
-        <Route path="/movies/now-playing" element={<NowPlayingMovies />} />
-        <Route path="/tv-series/popular" element={<PopularTVSeries />} />
-        <Route path="/tv-series/top-rated" element={<TopRatedTVSeries />} />
-        <Route path="/tv-series/now-playing" element={<NowPlayingTVSeries />} />
-        <Route path="/actors/popular" element={<PopularActors />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <Footer className="App-footer" />
+      <div className="App">
+        <AppNavbar />
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/movies/popular" element={<PopularMovies />} />
+          <Route path="/movies/coming-soon" element={<ComingSoonMovies />} />
+          <Route path="/movies/now-playing" element={<NowPlayingMovies />} />
+          <Route path="/tv-series/popular" element={<PopularTVSeries />} />
+          <Route path="/tv-series/top-rated" element={<TopRatedTVSeries />} />
+          <Route path="/tv-series/now-playing" element={<NowPlayingTVSeries />} />
+          <Route path="/actors/popular" element={<PopularActors />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }
