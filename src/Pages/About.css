@@ -1,0 +1,100 @@
+.about-section {
+    padding: 5rem 0;
+    background: rgb(237, 237, 237);
+}
+  
+.about-container {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.about-img {
+    width: 50%;
+}
+
+.about-img img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    margin: 0; /* Menghapus margin agar gambar mentok ke kiri */
+}
+  
+.form-container {
+    padding: 2rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container input,
+.form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-container textarea {
+    resize: none;
+}
+  
+.form-container h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.about-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+    margin-top: 1rem;
+}
+
+.about-btn:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff6b6b);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-img,
+    .form-container {
+        width: 100%;
+    }
+    
+    .form-container {
+        padding: 2rem 1rem; /* Penyesuaian padding untuk tampilan mobile */
+    }
+    
+    .form-container h2 {
+        font-size: 2rem; /* Ukuran font untuk tampilan mobile */
+        margin-bottom: 1.5rem; /* Penyesuaian margin untuk tampilan mobile */
+    }
+    
+    .about-btn {
+        align-self: center; /* Posisikan tombol di tengah pada tampilan mobile */
+        margin-top: 2rem; /* Tinggi margin atas pada tampilan mobile */
+    }
+}

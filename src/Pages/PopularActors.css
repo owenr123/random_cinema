@@ -1,0 +1,161 @@
+.actors-container {
+  padding-top: 20px;
+}
+
+.actors-title {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.actors-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -25px;
+  padding: 0 2rem;
+}
+
+.actors-cards-row > .actors-custom-col {
+  flex: 0 0 calc(20% - 6px);
+  max-width: calc(20% - 6px);
+  padding: 0 6px;
+}
+
+.actors-cards {
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+}
+
+.actors-cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.actors-cards-img-container {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+
+.actors-cards-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: -20px;
+}
+
+.actors-cards-body {
+  height: 100px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.actors-cards-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.actors-cards-text {
+  font-size: 10px;
+  color: #666;
+  text-align: left;
+}
+
+/* Untuk smartphone dan iPhone */
+@media (max-width: 576px) {
+  .actors-cards-row > .actors-custom-col {
+    flex: 0 0 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+  }
+}
+
+/* Untuk iPad Mini */
+@media (max-width: 768px) {
+  .ipad-mini .actors-cards-row > .actors-custom-col {
+    flex: 0 0 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+  }
+}
+
+/* Untuk layar dengan lebar 1200px atau lebih kecil */
+@media (max-width: 1200px) {
+  .actors-cards-row {
+    margin: 0 -15px;
+    padding: 0 1rem;
+  }
+
+  .actors-cards-row > .actors-custom-col {
+    flex: 0 0 calc(25% - 6px);
+    max-width: calc(25% - 6px);
+    margin-bottom: 1rem;
+  }
+}
+
+/* Untuk layar dengan lebar 992px atau lebih kecil */
+@media (max-width: 992px) {
+  .actors-cards-row > .actors-custom-col {
+    flex: 0 0 calc(33.33% - 6px);
+    max-width: calc(33.33% - 6px);
+  }
+}
+
+/* Untuk layar dengan lebar 768px atau lebih kecil */
+@media (max-width: 768px) {
+  .actors-cards-row {
+    margin: 0 1rem;
+  }
+
+  .actors-cards-row > .actors-custom-col {
+    flex: 0 0 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+    margin-bottom: 1rem;
+  }
+
+  .actors-cards {
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    overflow: visible;
+  }
+
+  .actors-cards-img-container {
+    height: auto;
+  }
+
+  .actors-cards-body {
+    height: auto;
+    padding: 10px;
+    overflow: visible;
+    position: relative;
+  }
+
+  .actors-cards-name {
+    font-size: 14px;
+    margin-top: -18px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+
+  .actors-cards-text {
+    font-size: 12px;
+    text-overflow: ellipsis;
+  }
+}
+
+/* Untuk layar dengan lebar 576px atau lebih kecil */
+@media (max-width: 576px) {
+  .actors-cards-row > .actors-custom-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}

@@ -1,0 +1,164 @@
+.testimoni-section {
+  margin: 20px;
+  text-align: center;
+  height: 480px;
+}
+
+.testimoni-section h2 {
+  margin-top: 4rem;
+}
+
+.testimoni-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem; /* Menyesuaikan jarak antara slider button dan testimonial */
+}
+
+/* Testimoni Cards Container */
+.testimoni-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  width: 80%; /* Menyesuaikan lebar konten testimonial */
+  height: 100%;
+}
+
+/* Individual Testimoni Card */
+.testimoni-card {
+  flex: 1 1 calc(33.33% - 32px); /* 3 cards per row */
+  max-width: calc(33.33% - 32px);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  padding-bottom: 6rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+  overflow: hidden;
+}
+
+.testimoni-card:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover effect */
+}
+
+/* Testimonial Image */
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* membuat gambar menjadi bulat */
+  background-color: #ccc;
+  margin-bottom: 16px;
+  background-size: cover; /* menyesuaikan ukuran gambar dengan kotak */
+  background-position: center; /* fokus pada tengah gambar */
+}
+
+.testimonial-details {
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Star Rating */
+.star-rating {
+  margin-top: 8px;
+}
+
+.star {
+  color: #ffd700; /* warna bintang kuning */
+  font-size: 1.2em;
+}
+
+.star.filled {
+  color: #f39c12; /* warna bintang kuning lebih gelap */
+}
+
+/* Slider Buttons */
+.slider-button {
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button.prev {
+  margin-right: 80px; /* Memberikan jarak antara tombol Prev dan testimonial */
+}
+
+.slider-button.next {
+  margin-left: 80px; /* Memberikan jarak antara tombol Next dan testimonial */
+}
+
+.slider-button:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff6b6b);; /* warna tombol biru lebih gelap saat hover */
+}
+
+/* Responsive Design for Tablets and Smartphones */
+@media (max-width: 1024px) {
+  .testimoni-section {
+    margin: 20px;
+    text-align: center;
+    height: auto; /* Ubah tinggi menjadi otomatis agar sesuai dengan konten */
+  }
+
+  .testimoni-section h2 {
+    margin-top: 2rem; /* Mengurangi margin top pada judul */
+  }
+
+  .testimoni-wrapper {
+    display: flex;
+    flex-direction: column; /* Mengubah tata letak menjadi kolom di layar kecil */
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem; /* Mengurangi margin top pada wrapper */
+  }
+
+  .testimoni-cards {
+    display: flex;
+    flex-direction: row; /* Mengubah tata letak menjadi baris di layar kecil */
+    flex-wrap: wrap;
+    gap: 18px;
+    width: 100%; /* Mengisi lebar layar penuh */
+  }
+
+  .testimoni-card {
+    flex: 1 1 calc(50% - 16px); /* 2 cards per row on smaller screens */
+    max-width: calc(50% - 16px);
+    margin-bottom: 1rem; /* Mengurangi margin bottom pada kartu */
+    padding: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .testimonial-image {
+    width: 60px; /* Mengurangi ukuran gambar pada layar kecil */
+    height: 60px;
+    margin-bottom: 12px; /* Mengurangi margin bottom pada gambar */
+  }
+
+  .slider-button.prev {
+    margin-right: 0; /* Menghilangkan margin right pada tombol prev */
+    margin-bottom: 1rem; /* Menambahkan margin bottom pada tombol prev */
+  }
+
+  .slider-button.next {
+    margin-left: 0; /* Menghilangkan margin left pada tombol next */
+    margin-top: 1rem; /* Menambahkan margin top pada tombol next */
+  }
+}
+
+@media (max-width: 480px) {
+  .testimoni-card {
+    flex: 1 1 100%; /* Satu kartu per baris di layar kecil */
+    max-width: 100%;
+  }
+}

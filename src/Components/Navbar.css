@@ -1,0 +1,55 @@
+.navbar.custom-navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    margin-top: 0;
+}
+
+.navbar .nav-item {
+    position: relative;
+}
+
+.navbar .nav-link {
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 4px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    color: black;
+}
+
+.navbar .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #343a40; /* Warna background submenu */
+    border-radius: 0.25rem;
+    z-index: 1000;
+    width: 140px;
+}
+
+.navbar .nav-item:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    color: #fff; /* Warna teks submenu */
+    padding: 0.5rem 1rem;
+    display: block;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: #495057; /* Warna background saat dihover */
+    border-radius: 0.25rem;
+}

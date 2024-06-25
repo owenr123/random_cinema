@@ -1,0 +1,147 @@
+/* Styles default */
+.movies-container {
+  padding-top: 20px;
+}
+
+.movies-title {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.movies-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  padding: 0 1rem;
+}
+
+.movies-cards-row > .movies-custom-col {
+  flex: 0 0 calc(20% - 20px);
+  max-width: calc(20% - 20px);
+  padding: 0 10px;
+}
+
+.movies-cards {
+  transition: transform 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.movies-cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movies-cards-img-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 150%;
+  position: relative;
+  overflow: hidden;
+}
+
+.movies-cards-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.movies-cards-body {
+  height: 80px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.movies-cards-name {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 2px;
+  margin-right: 4px;
+  text-transform: uppercase;
+}
+
+.movies-cards-text {
+  font-size: 10px;
+  color: #666;
+  text-align: left;
+}
+
+.more-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.more-button {
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.more-button:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff6b6b);
+  transform: scale(1.05);
+}
+
+/* Media query untuk layar dengan lebar 768px atau lebih kecil */
+@media (max-width: 768px) {
+  .movies-cards-row {
+    margin: 0; /* Hapus margin pada container */
+    padding: 0 0.5rem; /* Tambahkan padding untuk memberi ruang di sisi kiri dan kanan */
+  }
+
+  .movies-cards-row > .movies-custom-col {
+    flex: 0 0 calc(50% - 0.5rem); /* Kurangi lebar kolom untuk memberi ruang di antara kartu */
+    max-width: calc(50% - 0.5rem); /* Kurangi lebar maksimum kolom */
+    padding: 0 0.25rem; /* Tambahkan padding untuk memberi jarak horizontal antar kartu */
+    margin-bottom: 1rem;
+  }
+
+  .movies-cards {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+  }
+
+  .movies-cards-img-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .movies-cards-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .movies-cards-body {
+    height: auto;
+    padding: 10px;
+  }
+
+  .movies-cards-name {
+    font-size: 14px; /* Penyesuaian ukuran font */
+    margin-top: 4px; /* Pastikan margin positif */
+    overflow: hidden; /* Tambahkan overflow hidden */
+  }
+
+  .movies-cards-text {
+    font-size: 12px; /* Penyesuaian ukuran font */
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,23 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff;
+  position: relative;
+}
+
+.gradient-overlay {
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;  /* Sesuaikan dengan ukuran spinner */
+  height: 80px; /* Sesuaikan dengan ukuran spinner */
+  border-radius: 50%;
+}
+
+.gradient-overlay svg {
+  fill: transparent;
+  stroke: transparent;
+}
