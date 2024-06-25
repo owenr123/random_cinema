@@ -15,8 +15,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
+    <Router basename="/random_cinema">
         <AppNavbar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
@@ -30,7 +29,6 @@ function App() {
           <Route path="/about" element={<About />} />
         </Routes>
         <Footer />
-      </div>
     </Router>
   );
 }
