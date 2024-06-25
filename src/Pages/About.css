@@ -75,6 +75,11 @@
 }
 
 @media (max-width: 768px) {
+    .about-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     .about-container {
         flex-direction: column;
     }

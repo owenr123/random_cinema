@@ -32,18 +32,18 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #343a40; /* Warna background submenu */
+    background-color: #343a40;
     border-radius: 0.25rem;
     z-index: 1000;
     width: 140px;
 }
 
-.navbar .nav-item:hover .submenu {
+.navbar .submenu.show {
     display: block;
 }
 
 .submenu a {
-    color: #fff; /* Warna teks submenu */
+    color: #fff;
     padding: 0.5rem 1rem;
     display: block;
     text-decoration: none;
@@ -51,6 +51,6 @@
 }
 
 .submenu a:hover {
-    background-color: #495057; /* Warna background saat dihover */
+    background-color: #495057;
     border-radius: 0.25rem;
 }

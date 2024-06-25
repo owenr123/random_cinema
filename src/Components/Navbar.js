@@ -7,17 +7,21 @@ import Logo from '../Assets/Logo.png';  // Import the logo
 const AppNavbar = () => {
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
   const navbarCollapseRef = useRef(null);
 
   const handleNavLinkClick = (path) => {
     setActiveLink(path);
-    // Navigate to top of the page
+    setActiveSubmenu(null);  // Reset submenu when clicking main nav link
     window.scrollTo({ top: 0, behavior: 'auto' }); // Change 'auto' to 'smooth' for smooth scroll if needed
 
-    // Close the navbar if it's open
     if (navbarCollapseRef.current && navbarCollapseRef.current.classList.contains('show')) {
       navbarCollapseRef.current.classList.remove('show');
     }
+  };
+
+  const handleSubmenuClick = (submenu) => {
+    setActiveSubmenu(activeSubmenu === submenu ? null : submenu);
   };
 
   return (
@@ -44,11 +48,11 @@ const AppNavbar = () => {
             <div className="nav-item">
               <Nav.Link
                 className={`movies-link ${activeLink.startsWith('/movies') ? 'active' : ''}`}
-                onClick={() => handleNavLinkClick('/movies')}
+                onClick={() => handleSubmenuClick('movies')}
               >
                 Movies
               </Nav.Link>
-              <div className="submenu">
+              <div className={`submenu ${activeSubmenu === 'movies' ? 'show' : ''}`}>
                 <Link to="/movies/popular" onClick={() => handleNavLinkClick('/movies/popular')}>Popular</Link>
                 <Link to="/movies/coming-soon" onClick={() => handleNavLinkClick('/movies/coming-soon')}>Coming Soon</Link>
                 <Link to="/movies/now-playing" onClick={() => handleNavLinkClick('/movies/now-playing')}>Now Playing</Link>
@@ -57,11 +61,11 @@ const AppNavbar = () => {
             <div className="nav-item">
               <Nav.Link
                 className={`tvseries-link ${activeLink.startsWith('/tv-series') ? 'active' : ''}`}
-                onClick={() => handleNavLinkClick('/tv-series')}
+                onClick={() => handleSubmenuClick('tvseries')}
               >
                 TV Series
               </Nav.Link>
-              <div className="submenu">
+              <div className={`submenu ${activeSubmenu === 'tvseries' ? 'show' : ''}`}>
                 <Link to="/tv-series/popular" onClick={() => handleNavLinkClick('/tv-series/popular')}>Popular</Link>
                 <Link to="/tv-series/top-rated" onClick={() => handleNavLinkClick('/tv-series/top-rated')}>Top Rated</Link>
                 <Link to="/tv-series/now-playing" onClick={() => handleNavLinkClick('/tv-series/now-playing')}>Now Playing</Link>
@@ -70,11 +74,11 @@ const AppNavbar = () => {
             <div className="nav-item">
               <Nav.Link
                 className={`actors-link ${activeLink.startsWith('/actors') ? 'active' : ''}`}
-                onClick={() => handleNavLinkClick('/actors')}
+                onClick={() => handleSubmenuClick('actors')}
               >
                 Actors
               </Nav.Link>
-              <div className="submenu">
+              <div className={`submenu ${activeSubmenu === 'actors' ? 'show' : ''}`}>
                 <Link to="/actors/popular" onClick={() => handleNavLinkClick('/actors/popular')}>Popular Actors</Link>
               </div>
             </div>
