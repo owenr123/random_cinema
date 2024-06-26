@@ -15,7 +15,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/random_cinema">
         <AppNavbar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
