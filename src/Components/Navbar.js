@@ -71,17 +71,15 @@ const AppNavbar = () => {
                 <Link to="/tv-series/now-playing" onClick={() => handleNavLinkClick('/tv-series/now-playing')}>Now Playing</Link>
               </div>
             </div>
-            <div className="nav-item">
-              <Nav.Link
-                className={`actors-link ${activeLink.startsWith('/actors') ? 'active' : ''}`}
-                onClick={() => handleSubmenuClick('actors')}
-              >
-                Actors
-              </Nav.Link>
-              <div className={`submenu ${activeSubmenu === 'actors' ? 'show' : ''}`}>
-                <Link to="/actors/popular" onClick={() => handleNavLinkClick('/actors/popular')}>Popular Actors</Link>
-              </div>
-            </div>
+            {/* Updated Actors Menu */}
+            <Nav.Link
+              as={Link}
+              to="/actors/popular"
+              className={activeLink.startsWith('/actors') ? 'active' : ''}
+              onClick={() => handleNavLinkClick('/actors/popular')}
+            >
+              Actors
+            </Nav.Link>
             <Nav.Link
               as={Link}
               to="/about"

@@ -37,7 +37,7 @@ const HomepageHeroSection = () => {
     const interval = movies.length && setInterval(() => {
       setCurrentIndex(prevIndex => (prevIndex + 1) % movies.length);
       setNextIndex(prevIndex => (prevIndex + 1) % movies.length);
-    }, 59000);
+    }, 20000);
 
     return () => clearInterval(interval);
   }, [movies.length]);
