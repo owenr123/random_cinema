@@ -15,7 +15,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/random_cinema">
+    <Router>
         <AppNavbar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
@@ -32,5 +32,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
