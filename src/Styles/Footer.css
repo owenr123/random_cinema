@@ -1,0 +1,137 @@
+.footer {
+  background-color: black;
+  padding: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 130px;
+}
+
+.footer-mobile {
+  max-width: 1200px; /* Sesuaikan dengan layout */
+  margin: 10px;
+  text-align: center; /* Biar semua teks juga lebih rapi */
+}
+
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 250px; /* Tambah jarak antar kolom */
+  flex-wrap: wrap;
+}
+
+.footer-section h3 {
+  color: #b7b7b7;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.footer-section ul li {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tmdb-logo {
+  width: 90px;
+}
+
+.footer-divider {
+  width: 50%;  /* Panjang garis (sesuai selera) */
+  border: 0;  /* Hilangkan default border */
+  height: 1px;  /* Ketebalan garis */
+  background-color: #b7b7b7;  /* Warna garis */
+  margin-top: 50px;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .footer-links {
+    gap: 100px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .footer-section ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Tambah jarak antar kolom */
+    flex-wrap: wrap;
+  }
+
+  .footer-section ul li {
+    font-size: 12px;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .footer-section ul li {
+    font-size: 11px;
+  }
+
+  .footer-divider {
+    width: 90%; /* Lebarkan divider biar lebih proporsional */
+  }
+
+  .footer-links .footer-section {
+    flex: 1 1 45%; /* Menjadikan "Perusahaan" dan "Sosial Media" sejajar */
+    max-width: 45%;
+  }
+
+  .footer-links .footer-section:last-child {
+    flex: 1 1 100%; /* Menempatkan "Kerjasama" di bawah */
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,308 @@
+.moviesdetails-container {
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.moviesdetails-header {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background-size: cover;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+}
+
+.moviesdetails-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.moviesdetails-poster {
+  width: 250px;
+  border-radius: 10px;
+  pointer-events: auto; /* Memastikan poster tetap bisa diklik jika diperlukan */
+  position: relative; /* Supaya tidak tertimpa overlay */
+  z-index: 1;
+}
+
+.moviesdetails-info {
+  display: block !important;
+  color: white;
+  position: relative; /* Supaya tidak tertimpa overlay */
+  z-index: 1;
+}
+
+.moviesdetails-meta {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.moviesdetails-rating-badge {
+  display: inline-block;
+  padding: 4px 6px;
+  background: #444;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.moviesdetails-rating {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.moviesdetails-rating-circle {
+  width: 50px;
+  height: auto;
+  background: #000;
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.moviesdetails-reactions {
+  display: flex;
+  align-items: left;
+  margin-left: 10px;
+}
+
+.moviesdetails-reaction {
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.moviesdetails-reaction:hover {
+  transform: scale(1.2);
+}
+
+.moviesdetails-synopsis-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+.moviesdetails-overview {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: -6px;
+}
+
+.moviesdetails-director {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.moviesdetails-cast h2 {
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.moviesdetails-cast-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin-top: auto;
+  border-radius: 0 0 15px 15px;
+  height: auto;
+}
+
+.moviesdetails-cast-scroll::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.moviesdetails-cast-scroll::-webkit-scrollbar-thumb {
+  background-color: rgb(98, 98, 98); /* Warna abu-abu terang */
+  border-radius: 10px; /* Membuat sudut membulat */
+}
+
+.moviesdetails-cast-container {
+  display: inline-flex;
+  gap: 1.5rem; /* Kurangi jarak antar kartu supaya lebih compact */
+  justify-content: flex-start;
+  align-items: stretch; /* Pastikan semua kartu memiliki tinggi yang sama */
+  padding: 0 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.moviesdetails-cast-card {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* Pastikan kartu fleksibel mengikuti konten */
+  width: 120px; /* Lebar kartu lebih kecil dari kartu film */
+  min-height: 210px; /* Tambahkan batas minimal tinggi agar tidak terlalu kecil */
+  text-decoration: none; /* Hilangkan underline dari Link */
+  color: inherit; /* Pastikan warna mengikuti elemen anak */
+}
+
+.moviesdetails-cast-card:hover {
+  transform: scale(1.05);
+}
+
+.moviesdetails-cast-img {
+  width: 100%;
+  height: 140px; /* Ukuran gambar lebih kecil dari kartu film */
+  object-fit: cover;
+  display: block;
+}
+
+.moviesdetails-cast-body {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1; /* Supaya tinggi kartu cast seragam */
+  text-align: left;
+}
+
+.moviesdetails-cast-name {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 4px;
+  margin-top: 5px;
+  white-space: normal; /* Biar teks turun ke bawah jika panjang */
+  overflow: visible; /* Tidak memotong teks */
+}
+
+.moviesdetails-cast-character {
+  font-size: 10px;
+  color: #5f5f5f;
+  white-space: normal; /* Sama, biar turun ke bawah */
+  overflow: visible; 
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .moviesdetails-poster {
+    width: 220px;
+    height: fit-content;
+  }
+
+  .moviesdetails-rating-circle {
+    width: 40px;
+    height: auto;
+  }
+
+  .moviesdetails-reaction {
+    font-size: 20px;
+  }
+
+  .moviesdetails-synopsis-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 18px;
+  }
+  
+  .moviesdetails-overview {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: -6px;
+  }
+  
+  .moviesdetails-director {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .moviesdetails-cast-container {
+    gap: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .moviesdetails-cast-card {
+    width: 110px;
+    min-height: 190px;
+  }
+
+  .moviesdetails-cast-img {
+    height: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .moviesdetails-cast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0 1rem;
+    padding-bottom: 20px;
+  }
+
+  .moviesdetails-cast-card {
+    width: 100%;
+    min-height: 180px;
+  }
+
+  .moviesdetails-cast-img {
+    height: 110px;
+  }
+
+  .moviesdetails-cast-name {
+    font-size: 10px;
+  }
+
+  .moviesdetails-cast-character {
+    font-size: 9px;
+  }
+}
+
+/* Mobile Kecil (HP ukuran kecil) */
+@media (max-width: 480px) {
+  .moviesdetails-header {
+    flex-direction: column; /* Mengubah layout menjadi kolom */
+    align-items: center; /* Pusatkan elemen */
+  }
+
+  .moviesdetails-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .moviesdetails-info {
+    order: 1; /* Pastikan informasi tetap di atas */
+    width: 100%;
+  }
+
+  .moviesdetails-description {
+    order: 2; /* Pindahkan deskripsi ke bawah */
+    width: 100%;
+    margin-top: 12px; /* Beri jarak agar lebih rapi */
+  }
+
+  .moviesdetails-poster {
+    order: 0; /* Poster tetap di atas */
+    width: 150px;
+  }
+
+  .moviesdetails-cast h2 {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .moviesdetails-cast-container {
+    padding-bottom: 20px;
+  }
+}

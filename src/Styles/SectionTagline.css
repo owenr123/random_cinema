@@ -1,0 +1,89 @@
+.tagline-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 0;
+  background: #111;
+}
+
+.tagline-card {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.tagline-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6) blur(1px);
+}
+
+.tagline-content {
+  position: relative;
+  padding: 12px;
+  color: white;
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tagline-text {
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 6px;
+  line-height: 1.4;
+  max-height: 80px; /* Tambahkan max-height lebih besar */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Batas max 4 baris */
+  -webkit-box-orient: vertical;
+  word-wrap: break-word; /* Agar teks turun ke bawah */
+  white-space: normal; /* Izinkan teks turun */
+  padding-right: 10px; /* Tambahkan jarak kanan */
+}
+
+.tagline-title {
+  font-size: 12px;
+  font-weight: bold;
+  color: yellow;
+  margin-top: 5px;
+  word-wrap: break-word; /* Agar teks turun */
+  white-space: normal; /* Izinkan teks turun */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px; /* Tambahkan jarak kanan */
+}
+
+/* 1024px & 768px (Tablet) - Tetap 4 kartu dalam satu baris */
+@media (max-width: 1024px) {
+  .tagline-container {
+    justify-content: center;
+    padding: 20px; /* Sedikit kurangi padding agar pas */
+  }
+  .tagline-card {
+    width: 250px; /* Kecilkan sedikit agar pas 4 kartu */
+    height: 160px; /* Sesuaikan proporsi */
+  }
+}
+
+/* 480px (Smartphone) - Ubah ke grid 2x2 */
+@media (max-width: 480px) {
+  .tagline-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kartu per baris */
+    gap: 15px; /* Jarak antar kartu */
+    padding: 15px; /* Kurangi padding biar lebih fit */
+  }
+  .tagline-card {
+    width: 100%; /* Supaya kartu mengisi grid */
+    height: 180px; /* Sesuaikan */
+  }
+}

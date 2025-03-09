@@ -1,0 +1,175 @@
+/* Styles default */
+.movies-container {
+  padding-top: 20px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+}
+
+.movies-container h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 16px;
+}
+
+.movies-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+
+.movies-custom-col {
+  flex: 0 0 calc(18% - 20px);
+  max-width: calc(18% - 20px);
+  text-decoration: none; /* Hilangkan underline dari Link */
+  color: inherit; /* Pastikan warna mengikuti elemen anak */
+}
+
+.movies-custom-col:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.movies-cards {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative; /* Pastikan relative agar child absolute bisa diposisikan */
+  transition: transform 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Pastikan tinggi kartu mengikuti flex container */
+}
+
+.movies-cards:hover {
+  transform: scale(1.05);
+}
+
+.movies-cards-img-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.movies-cards-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Rating selalu muncul sejak awal */
+.movies-rating {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 1; /* Pastikan tetap terlihat */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hapus efek hover agar tidak mempengaruhi tampilan rating */
+.movies-cards:hover .movies-rating {
+  opacity: 1;
+}
+
+.movies-cards-body {
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Biar tetap di atas */
+  flex-grow: 1; /* Supaya tetap memenuhi ruang dan sejajar */
+}
+
+.movies-cards-name {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  text-align: left;
+  margin-bottom: 6px; /* Biar ada sedikit jarak tapi tetap dekat */
+  margin-top: 1px;
+}
+
+.movies-cards-text {
+  font-size: 12px;
+  color: #5f5f5f;
+  text-align: left;
+  margin-top: 0;
+}
+
+.more-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.more-button {
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+  border: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.more-button:hover {
+  background: linear-gradient(45deg, #ffcc00, #ff6b6b);
+  transform: scale(1.05);
+}
+
+/* Responsif untuk tablet (1024px) */
+@media (max-width: 1024px) {
+  .movies-custom-col {
+    flex: 0 0 calc(19% - 15px); /* Ukuran sedikit dikurangi supaya muat 5 kartu */
+    max-width: calc(19% - 15px);
+  }
+
+  .movies-cards-row {
+    gap: 20px; /* Kurangi jarak antar kartu supaya lebih rapat */
+  }
+}
+
+/* Responsif untuk smartphone (768px) */
+@media (max-width: 768px) {
+  .movies-custom-col {
+    flex: 0 0 calc(48% - 10px); /* 2 kartu per baris */
+    max-width: calc(48% - 10px);
+  }
+
+  .movies-cards-row {
+    gap: 15px;
+  }
+}
+

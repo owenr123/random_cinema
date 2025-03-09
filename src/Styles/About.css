@@ -1,0 +1,194 @@
+.about {
+    background: rgb(237, 237, 237);
+    padding: 0;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.about-form {
+    display: flex;
+    flex-direction: row; /* Membuat form sejajar horizontal */
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 15px 20px; /* Sedikit dikurangi supaya lebih compact */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px; /* Lebih kecil agar tidak terlalu besar */
+    width: 85%; /* Menyesuaikan agar tidak terlalu besar */
+}
+
+.about-img {
+    width: 45%; /* Lebih kecil supaya tidak mendominasi */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 15px; /* Agar lebih dekat ke form */
+}
+
+.about-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.form-container {
+    padding: 1rem;
+    width: 50%; /* Sesuaikan agar form lebih compact */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container h2 {
+    font-size: 1.4rem; /* Sedikit lebih kecil */
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+/* Input & textarea styling */
+.form-container input,
+.form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 8px 0; /* Lebih kecil agar tidak terlalu tinggi */
+    font-size: 14px;
+    outline: none;
+    margin-bottom: 1rem; /* Kurangi jarak antar input */
+    color: #555;
+    font-weight: 500;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+    border-bottom: 2px solid #888;
+}
+
+.form-container textarea {
+    resize: none;
+    height: 80px; /* Lebih kecil dari sebelumnya */
+}
+
+.about-btn {
+    background: linear-gradient(45deg, #ff6b6b, #ffcc00);
+    border: none;
+    color: white;
+    padding: 10px 18px; /* Sedikit lebih kecil */
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-btn:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff6b6b);
+    transform: scale(1.05);
+}
+
+/* Tablet (ukuran layar max 1024px) */
+@media (max-width: 1024px) {
+    .about-container {
+        min-height: 60vh; /* Pastikan konten cukup tinggi */
+    }
+
+    .about-img {
+        width: 70%; /* Gambar lebih besar */
+        margin-bottom: 15px;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    .form-container h2 {
+        text-align: left; /* Biar lebih enak dilihat */
+    }
+}
+
+/* Smartphone (ukuran layar max 768px) */
+@media (max-width: 768px) {
+    .about-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .about-form {
+        padding: 15px;
+        width: 95%; /* Lebih kecil agar sesuai layar */
+    }
+
+    .about-img {
+        width: 80%; /* Gambar lebih besar di layar kecil */
+    }
+
+    .form-container h2 {
+        font-size: 1.2rem; /* Ukuran font judul lebih kecil */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 13px; /* Ukuran teks input lebih kecil */
+    }
+
+    .about-btn {
+        font-size: 14px;
+        padding: 8px 16px; /* Sedikit lebih kecil */
+    }
+}
+
+/* Smartphone kecil (ukuran layar max 480px) */
+@media (max-width: 480px) {
+    .about-container {
+        padding: 2rem;
+    }
+
+    .about-form {
+        width: 100%;
+        padding: 10px;
+        flex-direction: column; /* Susunan vertikal di smartphone kecil */
+        align-items: center; /* Biar lebih simetris */
+        text-align: center; /* Agar teks lebih enak dilihat */
+    }
+
+    .about-img {
+        width: 70%; /* Supaya tidak terlalu besar */
+        margin-bottom: 10px; /* Kasih jarak dengan form */
+    }
+
+    .form-container {
+        width: 90%; /* Biar form tetap pas */
+        padding: 0.8rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.1rem; /* Ukuran lebih kecil */
+    }
+
+    .form-container input,
+    .form-container textarea {
+        font-size: 12px;
+        padding: 6px 0; /* Sesuaikan padding */
+    }
+
+    .about-btn {
+        font-size: 13px;
+        padding: 7px 14px;
+    }
+}
+
+

@@ -1,0 +1,155 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background-color: #1a1a1a;
+  height: 64px;
+  position: relative;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-logo img {
+  height: 36px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-links li a.active,
+.navbar-links li a:hover {
+  background: linear-gradient(to right, #ff6b6b, #ffcc00);
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Dropdown Menu */
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 13px;
+}
+
+.dropdown-menu li a:hover {
+  background: linear-gradient(to right, #ff6b6b, #ffcc00);
+  color: black;
+}
+
+/* Perbaikan untuk Mobile */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    right: 0;
+    background-color: #1a1a1a;
+    z-index: 99;
+    gap: 12px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    padding-right: 18px;
+  }
+
+  .navbar-links.active {
+    max-height: 300px;
+  }
+
+  .navbar-links li {
+    text-align: right;
+    position: relative; /* Supaya tetap dalam konteks navbar-links */
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  /* Posisi Dropdown di Mobile */
+  .dropdown-menu {
+    position: fixed; /* Tetap fixed supaya keluar dari navbar-links */
+    left: auto;
+    right: 120px; /* Menyesuaikan dengan padding-right navbar-links */
+    top: auto;
+    background: #333;
+    padding: 8px;
+    z-index: 999;
+    border-radius: 6px;
+    min-width: 160px; /* Bisa disesuaikan */
+    transform: translateX(0);
+    text-align: left;
+    padding-left: 2px;
+    padding-right: 1px;
+  }
+
+  .dropdown-menu li {
+    text-align: left;
+  }
+
+  /* Tampilkan dropdown saat hover */
+  .navbar-links li:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+

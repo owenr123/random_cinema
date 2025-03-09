@@ -1,0 +1,32 @@
+.logo-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #111;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+}
+  
+.logo-track {
+  display: flex;
+  gap: 30px;
+  animation: scrollLeft 40s linear infinite;
+  width: max-content;
+}
+  
+.logo-item {
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+  
+  @keyframes scrollLeft {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
